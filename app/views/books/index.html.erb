@@ -1,0 +1,17 @@
+<div class="container">
+  <% if @book.errors.any? %>
+    <span class="errors"><%= @book.errors.count %>:error prohibited this object from being saved.</span>
+    <ul class="error_message">
+      <% @book.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+    </ul>
+  <% end %>
+
+  <div class="row">
+    <%= render 'users/user', book: @book %>
+    <%= render 'book', books: @books %>
+  </div>
+</div>
+
+
