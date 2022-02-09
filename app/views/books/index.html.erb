@@ -1,11 +1,13 @@
 <div class="container">
   <% if @book.errors.any? %>
-    <span class="errors"><%= @book.errors.count %>:error prohibited this object from being saved.</span>
-    <ul class="error_message">
+  <div class="alert alert-danger" role="alert">
+    <span><%= @book.errors.count %>:error prohibited this object from being saved.</span>
+    <ul>
       <% @book.errors.full_messages.each do |message| %>
         <li><%= message %></li>
       <% end %>
     </ul>
+  </div>
   <% end %>
 
   <div class="row">
