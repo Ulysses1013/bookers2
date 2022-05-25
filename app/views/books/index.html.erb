@@ -11,7 +11,7 @@
   <% end %>
 
   <div class="row">
-    <%= render 'users/user', book: @book %>
+    <%= render 'users/user', book: @book ,user: current_user %>
     <%= render 'book', books: @books %>
   </div>
 </div>
